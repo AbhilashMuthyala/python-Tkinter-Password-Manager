@@ -27,8 +27,7 @@ def generate_password():
 
 def save():
     user_entry = entry_website.get() + '|' + entry_email.get() + '|' + entry_password.get()
-    print(len(entry_email.get()))
-    if len(entry_email.get()) == 0 or len(entry_email.get()) == 0 or len(entry_email.get()) == 0:
+    if len(entry_email.get()) == 0 or len(entry_website.get()) == 0 or len(entry_password.get()) == 0:
         messagebox.showerror(title='Oops', message="Please enter all the fields")
     else:
         is_ok = messagebox.askokcancel(title=entry_website.get(), message=f"Please verify the below details \n email - {entry_email.get()} \n password - {entry_password.get()}")
